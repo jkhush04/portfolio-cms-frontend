@@ -1,16 +1,46 @@
-# React + Vite
+# Portfolio CMS — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Public-facing portfolio site, built in React (Vite) + Tailwind CSS. Fetches
+all content dynamically from the custom CMS backend — nothing is
+hardcoded, so updating content through the admin panel reflects here
+immediately with no redeploy.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React 18 (Vite)
+- Tailwind CSS v4
+- React Router
+- Axios
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Pages
+Home, About, Projects, Skills, Experience, Blog, Contact — each fetches
+its own data from the backend on load.
 
-## React Compiler
+## Running Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Requires the backend running (see `portfolio-cms-backend`) and a `.env`
+file (copy `.env.example` and fill in):
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+VITE_API_BASE_URL=http://localhost:8080
+
+
+## Building for Production
+
+```bash
+npm run build
+```
+
+Outputs to `dist/`.
+
+## Deployment
+Deployed on [Vercel/Netlify — fill in once live]. `VITE_API_BASE_URL` is
+set in the hosting platform's environment variable settings to point at
+the deployed backend.
+
+## Related Repos
+- Backend + CMS API: `portfolio-cms-backend`
+- Admin panel: `portfolio-cms-admin`
