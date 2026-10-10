@@ -37,7 +37,7 @@ npm run build
 Outputs to `dist/`.
 
 ## Deployment
-Deployed on [Vercel/Netlify — fill in once live]. `VITE_API_BASE_URL` is
+Deployed on [Vercel — https://portfolio-cms-frontend-ablj.vercel.app/]. `VITE_API_BASE_URL` is
 set in the hosting platform's environment variable settings to point at
 the deployed backend.
 
