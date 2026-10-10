@@ -26,6 +26,13 @@ export default function About() {
 
  return (
    <div className="max-w-2xl">
+        {about.profileImageUrl && (
+             <img
+               src={about.profileImageUrl}
+               alt={about.name}
+               className="w-32 h-32 rounded-full object-cover mb-6"
+             />
+           )}
      <h1 className="section-title">{about.name}</h1>
      <p className="text-lg text-gray-500">{about.headline}</p>
      <p className="mt-6 text-gray-700 leading-relaxed">{about.bio}</p>
