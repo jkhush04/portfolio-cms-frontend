@@ -26,7 +26,7 @@ export default function Experience(){
     <div>
       <h1 className="text-3xl font-bold mb-4">Experience</h1>
     <ul className="flex flex-col gap-6">
-      {experience.map((exp) => (
+      {experiences.map((exp) => (
         <li key={exp.id} className="border-l-2 border-[var(--color-accent)] pl-5">
           <h2 className="font-semibold">{exp.role} <span className="text-gray-400">@</span> {exp.company}</h2>
           <p className="text-sm text-gray-500">{exp.startDate} – {exp.endDate || "Present"}</p>
